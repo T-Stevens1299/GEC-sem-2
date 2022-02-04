@@ -11,12 +11,31 @@ SDL_Window* g_window = nullptr;
 bool InitSDL();
 void CloseSDL();
 
+bool Update()
+{
+	SDL_Event e;
+
+	SDL_PollEvent(&e);
+
+	switch (e.type)
+	{
+
+	case SDL_QUIT:
+		return true;
+		break;
+	}
+
+	return false;
+}
+
 
 int main(int argc, char* args[])
 {
-	if (InitSDL()) 
+	bool quit = false;
+
+	while (!quit) 
 	{
-		SDL_Delay(5000);
+		quit = Update();
 	}
 	
 	CloseSDL();
