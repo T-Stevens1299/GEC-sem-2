@@ -10,24 +10,7 @@ SDL_Window* g_window = nullptr;
 
 bool InitSDL();
 void CloseSDL();
-
-bool Update()
-{
-	SDL_Event e;
-
-	SDL_PollEvent(&e);
-
-	switch (e.type)
-	{
-
-	case SDL_QUIT:
-		return true;
-		break;
-	}
-
-	return false;
-}
-
+bool Update();
 
 int main(int argc, char* args[])
 {
@@ -74,4 +57,21 @@ void CloseSDL()
 
 	IMG_Quit();
 	SDL_Quit();
+}
+
+bool Update()
+{
+	SDL_Event e;
+
+	SDL_PollEvent(&e);
+
+	switch (e.type)
+	{
+
+	case SDL_QUIT:
+		return true;
+		break;
+	}
+
+	return false;
 }

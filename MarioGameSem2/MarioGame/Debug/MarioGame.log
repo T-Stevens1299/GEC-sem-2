@@ -1,2 +1,4 @@
 ﻿  MarioGame.cpp
-C:\Users\s012473l\OneDrive - Staffordshire University\1st Year - 2021 - 2022\Github\GEC-sem-2\MarioGameSem2\MarioGame\MarioGame.cpp(21,10): error C3861: 'Update': identifier not found
+C:\Users\s012473l\OneDrive - Staffordshire University\1st Year - 2021 - 2022\Github\GEC-sem-2\MarioGameSem2\MarioGame\MarioGame.cpp(51): warning C4715: 'InitSDL': not all control paths return a value
+  LINK : C:\Users\s012473l\OneDrive - Staffordshire University\1st Year - 2021 - 2022\Github\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe not found or not built by the last incremental link; performing full link
+  MarioGame.vcxproj -> C:\Users\s012473l\OneDrive - Staffordshire University\1st Year - 2021 - 2022\Github\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
