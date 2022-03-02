@@ -1,4 +1,6 @@
-﻿  MarioGame.cpp
+﻿  GameScreenLevel1.cpp
+  MarioGame.cpp
   Texture2D.cpp
   Generating Code...
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(35): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
   MarioGame.vcxproj -> C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
