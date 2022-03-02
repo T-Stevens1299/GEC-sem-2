@@ -6,7 +6,13 @@ using namespace std;
 
 Texture2D::Texture2D(SDL_Renderer* renderer) 
 {
+	m_renderer = renderer;
+}
 
+Texture2D::~Texture2D() 
+{
+	Free();
+	m_renderer = nullptr;
 }
 
 bool Texture2D::LoadFromFile(std::string path) 

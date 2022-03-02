@@ -15,8 +15,6 @@ Texture2D* g_texture = nullptr;
 bool InitSDL();
 void CloseSDL();
 void Render();
-//SDL_Texture* LoadTextureFromFile(string path);
-void FreeTexture();
 
 bool Update()
 {
@@ -27,8 +25,8 @@ bool Update()
 	switch (e.type)
 	{
 
-	case SDL_QUIT:
-		return true;
+		case SDL_QUIT:
+			return true;
 		break;
 	}
 
@@ -63,8 +61,6 @@ bool InitSDL()
 	}
 	else 
 	{
-
-		// HERE
 
 		g_window = SDL_CreateWindow("Games Engine Creation",
 			SDL_WINDOWPOS_UNDEFINED,
@@ -122,55 +118,18 @@ void Render()
 
 	SDL_RenderPresent(g_renderer);
 	
-	
-	/*SDL_Rect renderLocation = { 0,0,SCREEN_WIDTH, SCREEN_HEIGHT };
-
-	SDL_RenderCopyEx(g_renderer, g_texture, NULL, &renderLocation, 0, NULL, SDL_FLIP_NONE);
-
-	SDL_RenderPresent(g_renderer);*/
 }
-
-//SDL_Texture* LoadTextureFromFile(string path) 
-//{
-//	FreeTexture();
-//
-//	SDL_Texture* p_texture = nullptr;
-//
-//	SDL_Surface* p_surface = IMG_Load(path.c_str());
-//	if (p_surface != nullptr) 
-//	{
-//		p_texture = SDL_CreateTextureFromSurface(g_renderer, p_surface);
-//		if (p_texture == nullptr) 
-//		{
-//			cout << "Unable to create texture from surface. Error: " << SDL_GetError();
-//		}
-//	}
-//	SDL_FreeSurface(p_surface);
-//
-//	return p_texture;
-//}
-
-//void FreeTexture() 
-//{
-//	if (g_texture != nullptr)
-//	{
-//		SDL_DestroyTexture(g_texture);
-//		g_texture = nullptr;
-//	}
-//}
 
 void CloseSDL() 
 {
 	SDL_DestroyWindow(g_window);
 	g_window = nullptr;
 
-	//FreeTexture();
-	//SDL_DestroyRenderer(g_renderer);
-	//g_renderer = nullptr;
-
 	IMG_Quit();
 	SDL_Quit();
-
+	
+	SDL_DestroyRenderer(g_renderer);
+	g_renderer = nullptr;
 	delete g_texture;
 	g_texture = nullptr;
 }

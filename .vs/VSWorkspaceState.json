@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MarioGameSem2"
+    "\\MarioGameSem2",
+    "\\MarioGameSem2\\MarioGame"
   ],
-  "SelectedNode": "\\MarioGameSem2\\MarioGame.sln",
+  "SelectedNode": "\\MarioGameSem2\\MarioGame\\Texture2D.cpp",
   "PreviewInSolutionExplorer": false
 }

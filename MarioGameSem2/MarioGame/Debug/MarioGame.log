@@ -1,7 +1,4 @@
 ﻿  MarioGame.cpp
   Texture2D.cpp
-C:\Users\s012473l\Downloads\GEC-sem-2\MarioGameSem2\MarioGame\Texture2D.cpp(56,1): error C2084: function 'int Texture2D::GetWidth(void)' already has a body
-C:\Users\s012473l\Downloads\GEC-sem-2\MarioGameSem2\MarioGame\Texture2D.h(19): message : see previous definition of 'GetWidth'
-C:\Users\s012473l\Downloads\GEC-sem-2\MarioGameSem2\MarioGame\Texture2D.cpp(61,1): error C2084: function 'int Texture2D::GetHeight(void)' already has a body
-C:\Users\s012473l\Downloads\GEC-sem-2\MarioGameSem2\MarioGame\Texture2D.h(20): message : see previous definition of 'GetHeight'
   Generating Code...
+  MarioGame.vcxproj -> C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
