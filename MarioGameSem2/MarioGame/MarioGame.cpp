@@ -33,6 +33,15 @@ bool Update()
 		case SDL_QUIT:
 			return true;
 		break;
+
+	}
+	switch (e.key.keysym.sym)
+	{
+
+	case SDLK_q:
+		return true;
+		break;
+
 	}
 
 	game_screen_manager->Update((float)(new_time - g_old_time) / 1000.0f, e);
@@ -66,6 +75,7 @@ int main(int argc, char* args[])
 
 bool InitSDL() 
 {
+
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) 
 	{
 		cout << "SDL did not initialise. Error: " << SDL_GetError();
