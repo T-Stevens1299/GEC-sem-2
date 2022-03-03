@@ -19,6 +19,8 @@ protected:
 	bool m_moving_left;
 	bool m_moving_right;
 
+	float m_collision_radius;
+
 public:
 	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position);
 	~Character();
@@ -31,6 +33,10 @@ public:
 
 	void SetPosition(Vector2D new_position);
 	Vector2D GetPosition();
+
+	float GetCollisionRadius();
+
+	//Rect2D GetCollisionBox() { return Rect2D(m_position.x, m_position.y, m_texture->GetWidth(), m_texture->GetHeight()); }
 
 private:
 	FACING m_facing_direction;

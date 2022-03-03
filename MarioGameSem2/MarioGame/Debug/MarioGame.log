@@ -1,1 +1,23 @@
-﻿  MarioGame.vcxproj -> C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
+﻿  Character.cpp
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): error C2027: use of undefined type 'Texture2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(9): message : see declaration of 'Texture2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Rect2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(79,31): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(88,31): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Collisions.cpp
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): error C2027: use of undefined type 'Texture2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(9): message : see declaration of 'Texture2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Rect2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+  GameScreenLevel1.cpp
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): error C2027: use of undefined type 'Texture2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(9): message : see declaration of 'Texture2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Rect2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+  GameScreenManager.cpp
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): error C2027: use of undefined type 'Texture2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(9): message : see declaration of 'Texture2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Rect2D'
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(39,27): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+  Generating Code...
