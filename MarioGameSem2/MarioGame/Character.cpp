@@ -19,6 +19,8 @@ Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_po
 	m_moving_left = false;
 	m_moving_right = false;
 
+	m_collision_radius = 15.0f;
+
 }
 
 Character::~Character()
@@ -49,23 +51,16 @@ void Character::Update(float deltaTime, SDL_Event e)
 		MoveRight(deltaTime);
 	}
 
-	switch (e.key.keysym.sym)
+	if(m_jumping)
 	{
+		m_position.y -= m_jump_force * deltaTime;
 
-	case SDLK_a:
-		m_moving_left = true;
+		m_jump_force -= JUMP_FORCE_DECREMENT * deltaTime;
 
-		/*m_position.x -= 1;
-		m_facing_direction = FACING_LEFT;*/
-		break;
-
-	case SDLK_d:
-		m_moving_right = true;
-
-		/*m_position.x -= -1;
-		m_facing_direction = FACING_RIGHT;*/
-		break;
-
+		if (m_jump_force <= 0.0f) 
+		{
+			m_jumping = false;
+		}
 	}
 }
 
@@ -95,4 +90,17 @@ void Character::SetPosition(Vector2D new_position)
 Vector2D Character::GetPosition() 
 {
 	return m_position;
+}
+
+float Character::GetCollisionRadius()
+{
+	return m_collision_radius;
+}
+
+void Character::AddGravity(float deltaTime) 
+{
+	if (m_position.y + 64 <= SCREEN_HEIGHT) 
+	{
+		m_position.y += GRAVITY * deltaTime;
+	}
 }

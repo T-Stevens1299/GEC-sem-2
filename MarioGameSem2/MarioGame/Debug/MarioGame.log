@@ -1,5 +1,27 @@
 ﻿  Character.cpp
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(17,21): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(98,31): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(107,31): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(59,31): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(68,31): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  CharacterLuigi.cpp
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterLuigi.cpp(69,31): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterLuigi.cpp(78,31): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  CharacterMario.cpp
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterMario.cpp(69,31): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterMario.cpp(78,31): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Collisions.cpp
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameScreenLevel1.cpp
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameScreenManager.cpp
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(44,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(49): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
   MarioGame.vcxproj -> C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
