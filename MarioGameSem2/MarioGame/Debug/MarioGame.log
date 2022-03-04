@@ -1,1 +1,5 @@
-﻿  MarioGame.vcxproj -> C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
+﻿  Character.cpp
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(17,21): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(98,31): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(107,31): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  MarioGame.vcxproj -> C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe

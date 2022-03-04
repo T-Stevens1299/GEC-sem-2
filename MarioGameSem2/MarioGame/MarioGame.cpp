@@ -14,8 +14,6 @@ SDL_Renderer* g_renderer = nullptr;
 GameScreenManager* game_screen_manager;
 Uint32 g_old_time;
 
-//Texture2D* g_texture = nullptr;
-
 bool InitSDL();
 void CloseSDL();
 void Render();
@@ -33,14 +31,13 @@ bool Update()
 		case SDL_QUIT:
 			return true;
 		break;
-
 	}
 	switch (e.key.keysym.sym)
 	{
 
 	case SDLK_q:
 		return true;
-		break;
+	break;
 
 	}
 
@@ -84,7 +81,7 @@ bool InitSDL()
 	else 
 	{
 
-		g_window = SDL_CreateWindow("Games Engine Creation",
+		g_window = SDL_CreateWindow("Budget Mario Bros!",
 			SDL_WINDOWPOS_UNDEFINED,
 			SDL_WINDOWPOS_UNDEFINED,
 			SCREEN_WIDTH,
@@ -114,17 +111,6 @@ bool InitSDL()
 			return false;
 		}
 
-		/*g_texture = new Texture2D(g_renderer);
-		if (!g_texture->LoadFromFile("Images/test.bmp"))
-		{
-			return false;
-		}
-
-		if (g_texture == nullptr) 
-		{
-			return false;
-		}*/
-
 		return true;
 	}
 
@@ -137,7 +123,6 @@ void Render()
 	SDL_RenderClear(g_renderer);
 	
 	game_screen_manager->Render();
-	/*g_texture->Render(Vector2D(), SDL_FLIP_NONE);*/
 
 	SDL_RenderPresent(g_renderer);
 	
@@ -156,7 +141,4 @@ void CloseSDL()
 
 	delete game_screen_manager;
 	game_screen_manager = nullptr;
-
-	//delete g_texture;
-	//g_texture = nullptr;
 }

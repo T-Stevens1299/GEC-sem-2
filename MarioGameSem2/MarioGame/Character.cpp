@@ -49,24 +49,36 @@ void Character::Update(float deltaTime, SDL_Event e)
 		MoveRight(deltaTime);
 	}
 
-
-	switch (e.key.keysym.sym)
+	switch (e.type)
 	{
+	case SDL_KEYDOWN:
+		switch (e.key.keysym.sym)
+		{
 
-	case SDLK_a:
-		m_moving_left = true;
+		case SDLK_a:
+			m_moving_left = true;
+		break;
 
-		/*m_position.x -= 1;
-		m_facing_direction = FACING_LEFT;*/
-	break;
-	
-	case SDLK_d:
-		m_moving_right = true;
+		case SDLK_d:
+			m_moving_right = true;
+		break;
 
-		/*m_position.x -= -1;
-		m_facing_direction = FACING_RIGHT;*/
-	break;
+		}
+		break;
+	case SDL_KEYUP:
+		switch (e.key.keysym.sym)
+		{
 
+		case SDLK_a:
+			m_moving_left = false;
+		break;
+
+		case SDLK_d:
+			m_moving_right = false;
+		break;
+
+		}
+		break;
 	}
 }
 
