@@ -6,6 +6,7 @@
 #include "Character.h"
 #include "CharacterMario.h"
 #include "CharacterLuigi.h"
+#include "LevelMap.h"
 
 class Character;
 
@@ -21,10 +22,13 @@ public:
 	void Update(float deltaTime, SDL_Event e);
 
 private:
+	LevelMap* m_level_map;
+
 	Texture2D* m_background_texture;
 	Character* character_mario;
 	Character* character_luigi;
 	bool SetUpLevel();
+	void SetLevelMap();
 };
 
 #endif

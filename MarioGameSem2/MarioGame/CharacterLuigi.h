@@ -13,7 +13,7 @@ class CharacterLuigi : public Character
 {
 
 public:
-	CharacterLuigi(SDL_Renderer* renderer, string imagePath, Vector2D start_position);
+	CharacterLuigi(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~CharacterLuigi();
 
 	virtual void Render();
@@ -21,6 +21,9 @@ public:
 
 	virtual void MoveLeft(float deltaTime);
 	virtual void MoveRight(float deltaTime);
+
+	virtual void Jump();
+	virtual void AddGravity(float deltaTime);
 
 	void SetPosition(Vector2D new_position);
 	Vector2D GetPosition();

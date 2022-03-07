@@ -3,7 +3,7 @@
 #include "Texture2D.h"
 #include "constants.h"
 
-CharacterMario::CharacterMario(SDL_Renderer* renderer, string imagePath, Vector2D start_position) : Character(renderer, imagePath, start_position)
+CharacterMario::CharacterMario(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map) : Character(renderer, imagePath, start_position, map)
 {
 
 }
@@ -39,6 +39,12 @@ void CharacterMario::Update(float deltaTime, SDL_Event e)
 
 		case SDLK_d:
 			m_moving_right = true;
+			break;
+		case SDLK_SPACE:
+			if (m_can_jump) 
+			{
+				Jump();
+			}
 			break;
 
 		}
@@ -88,4 +94,26 @@ void CharacterMario::SetPosition(Vector2D new_position)
 Vector2D CharacterMario::GetPosition()
 {
 	return m_position;
+}
+
+void CharacterMario::AddGravity(float deltaTime)
+{
+	if (m_position.y + 64 <= SCREEN_HEIGHT)
+	{
+		m_position.y += GRAVITY * deltaTime;
+	}
+	else
+	{
+		m_can_jump = true;
+	}
+}
+
+void CharacterMario::Jump()
+{
+	if (!m_jumping)
+	{
+		m_jump_force = INITIAL_JUMP_FORCE;
+		m_jumping = true;
+		m_can_jump = false;
+	}
 }

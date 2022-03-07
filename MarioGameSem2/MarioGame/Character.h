@@ -4,6 +4,8 @@
 #include <iostream>
 #include "Texture2D.h"
 #include "Commons.h"
+#include "constants.h"
+#include "LevelMap.h"
 
 using namespace std;
 
@@ -28,7 +30,7 @@ protected:
 	float m_collision_radius;
 
 public:
-	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position);
+	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~Character();
 
 	virtual void Render();
@@ -37,6 +39,7 @@ public:
 	virtual void MoveLeft(float deltaTime);
 	virtual void MoveRight(float deltaTime);
 
+	virtual void Jump();
 	virtual void AddGravity(float deltaTime);
 
 	void SetPosition(Vector2D new_position);
@@ -48,6 +51,8 @@ public:
 
 private:
 	FACING m_facing_direction;
+
+	LevelMap* m_current_level_map;
 };
 
 #endif

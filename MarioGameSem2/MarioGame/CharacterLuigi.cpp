@@ -3,7 +3,7 @@
 #include "Texture2D.h"
 #include "constants.h"
 
-CharacterLuigi::CharacterLuigi(SDL_Renderer* renderer, string imagePath, Vector2D start_position) : Character(renderer, imagePath, start_position)
+CharacterLuigi::CharacterLuigi(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map) : Character(renderer, imagePath, start_position, map)
 {
 
 }
@@ -40,7 +40,12 @@ void CharacterLuigi::Update(float deltaTime, SDL_Event e)
 		case SDLK_RIGHT:
 			m_moving_right = true;
 			break;
-
+		case SDLK_UP:
+			if (m_can_jump)
+			{
+				Jump();
+			}
+			break;
 		}
 		break;
 	case SDL_KEYUP:
@@ -88,4 +93,26 @@ void CharacterLuigi::SetPosition(Vector2D new_position)
 Vector2D CharacterLuigi::GetPosition()
 {
 	return m_position;
+}
+
+void CharacterLuigi::AddGravity(float deltaTime)
+{
+	if (m_position.y + 64 <= SCREEN_HEIGHT)
+	{
+		m_position.y += GRAVITY * deltaTime;
+	}
+	else
+	{
+		m_can_jump = true;
+	}
+}
+
+void CharacterLuigi::Jump()
+{
+	if (!m_jumping)
+	{
+		m_jump_force = INITIAL_JUMP_FORCE;
+		m_jumping = true;
+		m_can_jump = false;
+	}
 }
