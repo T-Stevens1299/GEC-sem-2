@@ -1,1 +1,35 @@
-﻿  MarioGame.vcxproj -> C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
+﻿  Character.cpp
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(88,44): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.cpp(97,44): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  CharacterLuigi.cpp
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterLuigi.cpp(74,44): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterLuigi.cpp(83,44): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  CharacterMario.cpp
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterMario.cpp(75,44): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterMario.cpp(84,44): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Collisions.cpp
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameScreen.cpp
+  GameScreenLevel1.cpp
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameScreenManager.cpp
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(50,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  LevelMap.cpp
+  MarioGame.cpp
+  Texture2D.cpp
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Texture2D.cpp(57,42): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Texture2D.cpp(57,42): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Texture2D.cpp(57,58): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Texture2D.cpp(57,58): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(51): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
+  MarioGame.vcxproj -> C:\Users\Thomas Stevens\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
