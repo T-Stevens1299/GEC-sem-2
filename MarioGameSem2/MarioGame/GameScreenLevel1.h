@@ -1,6 +1,7 @@
 #ifndef _GAMESCREENLEVEL1_H
 #define _GAMESCREENLEVEL1_H
 #include <iostream>
+#include <vector>
 #include "GameScreen.h"
 #include "Commons.h"
 #include "Character.h"
@@ -8,6 +9,7 @@
 #include "CharacterLuigi.h"
 #include "LevelMap.h"
 #include "PowBlock.h"
+#include "CharacterKoopa.h"
 
 class Character;
 
@@ -30,7 +32,10 @@ private:
 	Texture2D* m_background_texture;
 	Character* character_mario;
 	Character* character_luigi;
+	Character* Koopa;
 	PowBlock* m_pow_block;
+
+	vector<Character*> m_enemies;
 
 	bool m_screenshake;
 	float m_shake_time;
@@ -41,6 +46,9 @@ private:
 
 	bool SetUpLevel();
 	void SetLevelMap();
+
+	void UpdateEnemies(float deltaTime, SDL_Event e);
+	void CreateKoopa(Vector2D position, FACING direction, float speed);
 };
 
 #endif

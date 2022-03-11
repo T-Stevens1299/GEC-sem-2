@@ -21,6 +21,8 @@ Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_po
 
 	m_can_jump = true;
 
+	m_alive = true;
+
 	m_collision_radius = 15.0f;
 
 	m_current_level_map = map;
@@ -134,4 +136,9 @@ void Character::Jump()
 		m_jumping = true;
 		m_can_jump = false;
 	}
+}
+
+void Character::SetAlive(bool isAlive)
+{
+	m_alive = isAlive;
 }

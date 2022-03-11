@@ -25,6 +25,8 @@ protected:
 	bool m_jumping;
 	bool m_can_jump;
 
+	bool m_alive;
+
 	float m_jump_force;
 
 	float m_collision_radius;
@@ -43,6 +45,10 @@ public:
 	virtual void AddGravity(float deltaTime);
 	void CancelJump() {m_jumping = false;}
 	bool isJumping() {return m_jumping;}
+
+	void SetAlive(bool isAlive);
+
+	bool GetAlive() { return m_alive; };
 
 	void SetPosition(Vector2D new_position);
 	Vector2D GetPosition();
