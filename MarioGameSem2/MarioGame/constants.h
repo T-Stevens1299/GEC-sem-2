@@ -2,6 +2,8 @@
 #ifndef _CONSTANTS_H
 #define _CONSTANTS_H
 
+#define SHAKE_DURATION 0.25f
+
 #define SCREEN_WIDTH 512
 #define SCREEN_HEIGHT 416
 
