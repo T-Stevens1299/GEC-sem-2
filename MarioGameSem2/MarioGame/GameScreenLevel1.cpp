@@ -195,7 +195,7 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 					}
 					else
 					{
-						//kill mario
+						character_mario->SetAlive(false);
 					}
 
 				}

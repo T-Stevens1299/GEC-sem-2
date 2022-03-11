@@ -1,16 +1,1 @@
-﻿  CharacterKoopa.cpp
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(58,114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\Character.h(58,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(13,43): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(14,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(24,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(28,10): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(31,42): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(31,42): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(31,61): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(31,61): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(33,66): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(33,66): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(33,85): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterKoopa.cpp(33,85): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  MarioGame.vcxproj -> C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
+﻿  MarioGame.vcxproj -> C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
