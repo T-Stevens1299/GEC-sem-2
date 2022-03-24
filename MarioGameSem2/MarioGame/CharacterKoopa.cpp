@@ -93,7 +93,7 @@ void CharacterKoopa::Jump()
 
 void CharacterKoopa::FlipRightWayUp() 
 {
-	m_facing_direction = FACING_RIGHT; //fix this
+	m_facing_direction = FACING_RIGHT;
 	m_injured = false;
 	Jump();
 }
