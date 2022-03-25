@@ -1,13 +1,14 @@
 #include "GameScreenLevel1.h"
 #include "Texture2D.h"
 #include "Collisions.h"
+#include "CharacterKoopa.h"
 #include <iostream>
+
 using namespace std;
 
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
 {
 	SetUpLevel();
-
 	m_level_map = nullptr;
 }
 
@@ -158,10 +159,13 @@ void GameScreenLevel1::DoScreenShake()
 	m_shake_time = SHAKE_DURATION;
 	m_wobble = 0.0f;
 
-	//for (unsigned int j = 0; j < m_enemies.size(); j++) 
-	//{
-	//	CharacterKoopa::TakeDamage();
-	//}
+	for (unsigned int j = 0; j < m_enemies.size(); j++) 
+	{
+		if (m_enemies[j]->GetAlive()) 
+		{
+			m_enemies[j]->TakeDamage();
+		}
+	}
 }
 
 void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e) 

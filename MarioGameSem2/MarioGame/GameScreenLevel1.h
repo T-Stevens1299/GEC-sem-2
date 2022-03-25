@@ -32,10 +32,10 @@ private:
 	Texture2D* m_background_texture;
 	Character* character_mario;
 	Character* character_luigi;
-	Character* Koopa;
+	CharacterKoopa* Koopa;
 	PowBlock* m_pow_block;
 
-	vector<Character*> m_enemies;
+	vector<CharacterKoopa*> m_enemies;
 
 	bool m_screenshake;
 	float m_shake_time;
