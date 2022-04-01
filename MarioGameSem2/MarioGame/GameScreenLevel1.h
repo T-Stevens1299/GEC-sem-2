@@ -27,6 +27,8 @@ public:
 	void Update(float deltaTime, SDL_Event e);
 	void UpdatePowBlock();
 
+	SDL_Rect camera;
+
 private:
 	LevelMap* m_level_map;
 	Texture2D* m_background_texture;

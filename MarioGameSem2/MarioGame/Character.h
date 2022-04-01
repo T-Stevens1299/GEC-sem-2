@@ -6,6 +6,7 @@
 #include "Commons.h"
 #include "constants.h"
 #include "LevelMap.h"
+#include "GameScreenLevel1.h"
 
 using namespace std;
 
@@ -35,7 +36,7 @@ public:
 	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~Character();
 
-	virtual void Render();
+	virtual void Render(SDL_Rect source, SDL_Rect draw);
 	virtual void Update(float deltaTime, SDL_Event e);
 
 	virtual void MoveLeft(float deltaTime);

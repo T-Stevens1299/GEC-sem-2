@@ -1,5 +1,6 @@
 #include "Character.h"
 #include "Texture2D.h"
+#include "GameScreenLevel1.h"
 
 using namespace std;
 
@@ -34,8 +35,18 @@ Character::~Character()
 	m_renderer = nullptr;
 }
 
-void Character::Render() 
+void Character::Render(SDL_Rect source, SDL_Rect draw)
 {
+	source.x = 0;
+	source.y = 0;
+	source.w = m_texture->GetWidth();
+	source.h = m_texture->GetHeight();
+
+	draw.x = m_position.x;
+	draw.y = m_position.y;
+	draw.w = m_texture->GetWidth();
+	draw.h = m_texture->GetHeight();
+
 	if (m_facing_direction == FACING_RIGHT) 
 	{
 		m_texture->Render(m_position, SDL_FLIP_NONE);
