@@ -1,20 +1,20 @@
 #ifndef _CHARACTER_H
 #define _CHARACTER_H
-#include <SDL.h>
+
 #include <iostream>
-#include "Texture2D.h"
+
+#include <SDL.h>
+
 #include "Commons.h"
 #include "constants.h"
 #include "LevelMap.h"
-#include "GameScreenLevel1.h"
-
-using namespace std;
 
 class Texture2D;
 
+using namespace std;
+
 class Character
 {
-
 protected:
 	SDL_Renderer* m_renderer;
 	Vector2D m_position;
@@ -36,14 +36,16 @@ public:
 	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~Character();
 
-	virtual void Render(SDL_Rect source, SDL_Rect draw);
-	virtual void Update(float deltaTime, SDL_Event e);
+	void Render();
+	void Update(float deltaTime, SDL_Event e);
 
-	virtual void MoveLeft(float deltaTime);
-	virtual void MoveRight(float deltaTime);
+	void MoveLeft(float deltaTime);
+	void MoveRight(float deltaTime);
 
+	void AddGravity(float deltaTime);
+	
 	virtual void Jump();
-	virtual void AddGravity(float deltaTime);
+
 	void CancelJump() {m_jumping = false;}
 	bool isJumping() {return m_jumping;}
 
@@ -56,7 +58,7 @@ public:
 
 	float GetCollisionRadius();
 
-	Rect2D GetCollisionBox() { return Rect2D(m_position.x, m_position.y, m_texture->GetWidth(), m_texture->GetHeight()); }
+	Rect2D GetCollisionBox();
 
 private:
 	FACING m_facing_direction;

@@ -1,6 +1,6 @@
 #include "Character.h"
+
 #include "Texture2D.h"
-#include "GameScreenLevel1.h"
 
 using namespace std;
 
@@ -35,8 +35,11 @@ Character::~Character()
 	m_renderer = nullptr;
 }
 
-void Character::Render(SDL_Rect source, SDL_Rect draw)
+void Character::Render()
 {
+	SDL_Rect source;
+	SDL_Rect draw;
+
 	source.x = 0;
 	source.y = 0;
 	source.w = m_texture->GetWidth();
@@ -153,3 +156,6 @@ void Character::SetAlive(bool isAlive)
 {
 	m_alive = isAlive;
 }
+
+
+Rect2D Character::GetCollisionBox() { return Rect2D(m_position.x, m_position.y, m_texture->GetWidth(), m_texture->GetHeight()); }

@@ -1,23 +1,25 @@
 #ifndef _GAMESCREENLEVEL1_H
 #define _GAMESCREENLEVEL1_H
+
 #include <iostream>
 #include <vector>
+
 #include "GameScreen.h"
 #include "Commons.h"
-#include "Character.h"
-#include "CharacterMario.h"
-#include "CharacterLuigi.h"
+#include "Collisions.h"
+
 #include "LevelMap.h"
 #include "PowBlock.h"
+
+#include "CharacterMario.h"
+#include "CharacterLuigi.h"
 #include "CharacterKoopa.h"
 
 class Character;
 
 class Texture2D;
 
-class PowBlock;
-
-class GameScreenLevel1:GameScreen
+class GameScreenLevel1 : GameScreen
 {
 public:
 	GameScreenLevel1(SDL_Renderer* renderer);
@@ -32,12 +34,12 @@ public:
 private:
 	LevelMap* m_level_map;
 	Texture2D* m_background_texture;
-	Character* character_mario;
-	Character* character_luigi;
+	CharacterMario* character_mario;
+	CharacterLuigi* character_luigi;
 	CharacterKoopa* Koopa;
 	PowBlock* m_pow_block;
 
-	vector<CharacterKoopa*> m_enemies;
+	std::vector<CharacterKoopa*> m_enemies;
 
 	bool m_screenshake;
 	float m_shake_time;

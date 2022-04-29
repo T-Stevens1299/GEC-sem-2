@@ -1,6 +1,7 @@
 #pragma once
 #ifndef _POWBLOCK_H
 #define _POWBLOCK_H
+
 #include "Texture2D.h"
 #include "LevelMap.h"
 #include "Commons.h"

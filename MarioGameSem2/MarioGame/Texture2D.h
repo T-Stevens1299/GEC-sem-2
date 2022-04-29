@@ -21,7 +21,7 @@ public:
 
 	void Render(SDL_Rect src_rect, SDL_Rect src_dest, SDL_RendererFlip flip, double angle = 0.0);
 
-	void render(Vector2D new_position, SDL_Rect clip, SDL_RendererFlip flip, double angle);
+	//void render(Vector2D new_position, SDL_Rect clip, SDL_RendererFlip flip, double angle);
 
 private:
 	SDL_Renderer* m_renderer;

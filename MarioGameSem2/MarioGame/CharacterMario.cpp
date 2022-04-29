@@ -1,7 +1,6 @@
 #include "CharacterMario.h"
-#include "Character.h"
+
 #include "Texture2D.h"
-#include "constants.h"
 
 CharacterMario::CharacterMario(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map) : Character(renderer, imagePath, start_position, map)
 {
@@ -15,14 +14,7 @@ CharacterMario::~CharacterMario()
 
 void CharacterMario::Render() 
 {
-	if (m_facing_direction == FACING_RIGHT)
-	{
-		m_texture->Render(m_position, SDL_FLIP_NONE);
-	}
-	else
-	{
-		m_texture->Render(m_position, SDL_FLIP_HORIZONTAL);
-	}
+	Character::Render();
 }
 
 void CharacterMario::Update(float deltaTime, SDL_Event e) 
@@ -43,7 +35,7 @@ void CharacterMario::Update(float deltaTime, SDL_Event e)
 		case SDLK_SPACE:
 			if (m_can_jump) 
 			{
-				Jump();
+				Character::Jump();
 			}
 			break;
 
@@ -86,34 +78,34 @@ void CharacterMario::MoveRight(float deltaTime)
 	}
 }
 
-void CharacterMario::SetPosition(Vector2D new_position)
-{
-	m_position = new_position;
-}
-
-Vector2D CharacterMario::GetPosition()
-{
-	return m_position;
-}
-
-void CharacterMario::AddGravity(float deltaTime)
-{
-	if (m_position.y + 64 <= SCREEN_HEIGHT)
-	{
-		m_position.y += GRAVITY * deltaTime;
-	}
-	else
-	{
-		m_can_jump = true;
-	}
-}
-
-void CharacterMario::Jump()
-{
-	if (!m_jumping)
-	{
-		m_jump_force = INITIAL_JUMP_FORCE;
-		m_jumping = true;
-		m_can_jump = false;
-	}
-}
+//void CharacterMario::SetPosition(Vector2D new_position)
+//{
+//	m_position = new_position;
+//}
+//
+//Vector2D CharacterMario::GetPosition()
+//{
+//	return m_position;
+//}
+//
+//void CharacterMario::AddGravity(float deltaTime)
+//{
+//	if (m_position.y + 64 <= SCREEN_HEIGHT)
+//	{
+//		m_position.y += GRAVITY * deltaTime;
+//	}
+//	else
+//	{
+//		m_can_jump = true;
+//	}
+//}
+//
+//void CharacterMario::Jump()
+//{
+//	if (!m_jumping)
+//	{
+//		m_jump_force = INITIAL_JUMP_FORCE;
+//		m_jumping = true;
+//		m_can_jump = false;
+//	}
+//}

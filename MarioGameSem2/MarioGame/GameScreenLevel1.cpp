@@ -1,8 +1,8 @@
 #include "GameScreenLevel1.h"
+
+#include "Character.h"
+
 #include "Texture2D.h"
-#include "Collisions.h"
-#include "CharacterKoopa.h"
-#include <iostream>
 
 using namespace std;
 
@@ -87,8 +87,8 @@ void GameScreenLevel1::Render()
 		m_enemies[i]->Render();
 	}
 
-	character_mario->Render(camera, camera);
-	character_luigi->Render(camera, camera);
+	character_mario->Render(/*camera, camera*/);
+	character_luigi->Render(/*camera, camera*/);
 	m_pow_block->Render();
 	m_background_texture->Render(Vector2D(0, m_background_yPos), SDL_FLIP_NONE);
 }

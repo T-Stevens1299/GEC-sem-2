@@ -2,9 +2,9 @@
 #ifndef _CHARACTERMARIO_H
 #define _CHARACTERMARIO_H
 
-#include <SDL.h>
 #include <iostream>
 #include <string>
+#include <SDL.h>
 #include "Character.h"
 
 class Texture2D;
@@ -16,17 +16,17 @@ public:
 	CharacterMario(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~CharacterMario();
 
-	virtual void Render();
-	virtual void Update(float deltaTime, SDL_Event e);
+	void Render();
+	void Update(float deltaTime, SDL_Event e);
 
-	virtual void MoveLeft(float deltaTime);
-	virtual void MoveRight(float deltaTime);
+	void MoveLeft(float deltaTime);
+	void MoveRight(float deltaTime);
 
-	virtual void Jump();
-	virtual void AddGravity(float deltaTime);
+	//virtual void Jump();
+	//void AddGravity(float deltaTime);
 
-	void SetPosition(Vector2D new_position);
-	Vector2D GetPosition();
+	//void SetPosition(Vector2D new_position);
+	//Vector2D GetPosition();
 private:
 	FACING m_facing_direction;
 };

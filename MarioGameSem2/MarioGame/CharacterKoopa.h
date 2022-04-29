@@ -2,10 +2,14 @@
 #ifndef _CHARACTERKOOPA_
 #define _CHARACTERKOOPA_
 
-#include <SDL.h>
 #include <iostream>
 #include <string>
+
+#include <SDL.h>
+
 #include "Character.h"
+
+class Texture2D;
 
 class CharacterKoopa : public Character 
 {
@@ -13,10 +17,10 @@ public:
 	CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map, FACING start_facing, float movement_speed);
 	~CharacterKoopa();
 
-	virtual void Render();
-	virtual void Update(float deltaTime, SDL_Event e);
+	void Render();
+	void Update(float deltaTime, SDL_Event e);
 
-	void Jump();
+	void Jump() override;
 	void TakeDamage();
 
 	bool GetInjured() { return m_injured; };
