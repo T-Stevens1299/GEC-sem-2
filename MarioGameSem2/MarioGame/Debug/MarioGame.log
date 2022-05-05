@@ -1,16 +1,6 @@
-﻿  CharacterLuigi.cpp
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterLuigi.cpp(66,44): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterLuigi.cpp(75,44): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-  CharacterMario.cpp
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterMario.cpp(67,44): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\CharacterMario.cpp(76,44): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-  GameScreenLevel1.cpp
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\PowBlock.h(21,121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\PowBlock.h(21,97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(85,20): warning C4018: '<': signed/unsigned mismatch
-  GameScreenManager.cpp
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\PowBlock.h(21,121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\PowBlock.h(21,97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Generating Code...
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(114): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
-  MarioGame.vcxproj -> C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe
+﻿  GameScreenLevel1.cpp
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\PowBlock.h(21,121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\PowBlock.h(21,97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(85,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(114): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
+  MarioGame.vcxproj -> C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe

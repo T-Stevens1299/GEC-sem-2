@@ -44,7 +44,7 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 
 	if (camera.x > LEVEL_WIDTH - camera.w) 
 	{
-		camera.x = LEVEL_WIDTH - camera.w;
+		camera.x = (LEVEL_WIDTH - camera.w);
 	}
 
 	if (m_screenshake) 
@@ -206,13 +206,26 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 			{
 				if (Collisions::Instance()->Circle(m_enemies[i], character_mario))
 				{
-					if (dynamic_cast<CharacterKoopa*>(m_enemies[i])->GetInjured())
+					if (m_enemies[i]->GetInjured())
 					{
 						m_enemies[i]->SetAlive(false);
 					}
 					else
 					{
-						character_mario->SetAlive(false);
+						/*character_mario->SetAlive(false);*/
+					}
+
+				}
+
+				if (Collisions::Instance()->Circle(m_enemies[i], character_luigi))
+				{
+					if (m_enemies[i]->GetInjured())
+					{
+						m_enemies[i]->SetAlive(false);
+					}
+					else
+					{
+						/*character_luigi->SetAlive(false);*/
 					}
 
 				}

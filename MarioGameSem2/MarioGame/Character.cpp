@@ -15,7 +15,7 @@ Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_po
 		cout << "Failed to load background texture!" << endl;
 	}
 
-	m_facing_direction = FACING_RIGHT;
+	/*m_facing_direction = FACING_RIGHT;*/
 
 	m_moving_left = false;
 	m_moving_right = false;
