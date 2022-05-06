@@ -12,9 +12,9 @@ CharacterMario::~CharacterMario()
 
 }
 
-void CharacterMario::Render() 
+void CharacterMario::Render(SDL_Rect Camera)
 {
-	Character::Render();
+	Character::Render(Camera);
 }
 
 void CharacterMario::Update(float deltaTime, SDL_Event e) 

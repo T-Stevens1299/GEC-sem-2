@@ -18,7 +18,7 @@ CharacterKoopa::~CharacterKoopa()
 
 }
 
-void CharacterKoopa::Render()
+void CharacterKoopa::Render(SDL_Rect Camera)
 {
 	int left = 0.0f;
 
@@ -33,11 +33,11 @@ void CharacterKoopa::Render()
 
 	if (m_facing_direction == FACING_RIGHT) 
 	{
-		m_texture->Render(portion_of_sprite, destRect, SDL_FLIP_NONE);
+		m_texture->Render(m_position, portion_of_sprite, SDL_FLIP_NONE);
 	}
 	else 
 	{
-		m_texture->Render(portion_of_sprite, destRect, SDL_FLIP_HORIZONTAL);
+		m_texture->Render(m_position, portion_of_sprite, SDL_FLIP_HORIZONTAL);
 	}
 }
 

@@ -29,8 +29,6 @@ public:
 	void Update(float deltaTime, SDL_Event e);
 	void UpdatePowBlock();
 
-	SDL_Rect camera;
-
 private:
 	LevelMap* m_level_map;
 	Texture2D* m_background_texture;
@@ -38,6 +36,8 @@ private:
 	CharacterLuigi* character_luigi;
 	CharacterKoopa* Koopa;
 	PowBlock* m_pow_block;
+
+	SDL_Rect camera;
 
 	std::vector<CharacterKoopa*> m_enemies;
 

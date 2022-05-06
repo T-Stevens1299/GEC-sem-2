@@ -36,7 +36,7 @@ public:
 	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~Character();
 
-	void Render();
+	void Render(SDL_Rect camera_rect);
 	void Update(float deltaTime, SDL_Event e);
 
 	void MoveLeft(float deltaTime);

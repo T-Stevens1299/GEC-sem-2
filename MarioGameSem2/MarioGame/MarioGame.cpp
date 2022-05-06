@@ -56,8 +56,8 @@ int main(int argc, char* args[])
 {
 	if (InitSDL())
 	{
-		Mix_LoadMUS("Music/Mario.mp3");
-		if (Mix_PlayingMusic() ==0) 
+		g_music = Mix_LoadMUS("Music/Mario.mp3");
+		if (Mix_PlayingMusic() == 0) 
 		{
 			Mix_PlayMusic(g_music, -1);
 		}
@@ -81,12 +81,6 @@ int main(int argc, char* args[])
 
 bool InitSDL() 
 {
-
-	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
-	{
-		cout << "Mixer could not init. Error: " << Mix_GetError();
-		return false;
-	}
 
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) 
 	{
@@ -123,6 +117,12 @@ bool InitSDL()
 		else 
 		{
 			cout << "Renderer could not initialise. Error: " << SDL_GetError();
+			return false;
+		}
+
+		if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
+		{
+			cout << "Mixer could not init. Error: " << Mix_GetError();
 			return false;
 		}
 

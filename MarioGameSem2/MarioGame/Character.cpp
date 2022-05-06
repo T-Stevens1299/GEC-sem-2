@@ -35,28 +35,28 @@ Character::~Character()
 	m_renderer = nullptr;
 }
 
-void Character::Render()
+void Character::Render(SDL_Rect camera_rect)
 {
-	SDL_Rect source;
-	SDL_Rect draw;
+	SDL_Rect src_rect;
+	SDL_Rect dest_rect;
 
-	source.x = 0;
-	source.y = 0;
-	source.w = m_texture->GetWidth();
-	source.h = m_texture->GetHeight();
+	src_rect.x = 0;
+	src_rect.y = 0;
+	src_rect.w = m_texture->GetWidth();
+	src_rect.h = m_texture->GetHeight();
 
-	draw.x = m_position.x;
-	draw.y = m_position.y;
-	draw.w = m_texture->GetWidth();
-	draw.h = m_texture->GetHeight();
+	dest_rect.x = m_position.x - camera_rect.x;
+	dest_rect.y = m_position.y - camera_rect.y;
+	dest_rect.w = m_texture->GetWidth();
+	dest_rect.h = m_texture->GetHeight();
 
 	if (m_facing_direction == FACING_RIGHT) 
 	{
-		m_texture->Render(m_position, SDL_FLIP_NONE);
+		m_texture->Render(m_position, src_rect, SDL_FLIP_NONE);  //help3
 	}
 	else 
 	{
-		m_texture->Render(m_position, SDL_FLIP_HORIZONTAL);
+		m_texture->Render(m_position, dest_rect, SDL_FLIP_HORIZONTAL);
 	}
 }
 

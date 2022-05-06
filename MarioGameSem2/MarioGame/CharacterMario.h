@@ -16,7 +16,7 @@ public:
 	CharacterMario(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~CharacterMario();
 
-	void Render();
+	void Render(SDL_Rect Camera);
 	void Update(float deltaTime, SDL_Event e);
 
 	void MoveLeft(float deltaTime);

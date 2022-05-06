@@ -17,7 +17,7 @@ public:
 	CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map, FACING start_facing, float movement_speed);
 	~CharacterKoopa();
 
-	void Render();
+	void Render(SDL_Rect Camera);
 	void Update(float deltaTime, SDL_Event e);
 
 	void Jump() override;

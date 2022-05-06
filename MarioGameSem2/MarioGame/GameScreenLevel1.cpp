@@ -35,7 +35,7 @@ GameScreenLevel1::~GameScreenLevel1()
 
 void GameScreenLevel1::Update(float deltaTime, SDL_Event e) 
 {
-	camera.x = SCREEN_WIDTH;
+	camera.x = (SCREEN_WIDTH / 2);
 
 	if (camera.x < 0)
 	{
@@ -76,20 +76,28 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 	{
 		cout << "Circle hit!" << endl;
 	}
+
+	if (character_mario->GetPosition().x > SCREEN_WIDTH * 0.6)
+	{
+		camera.x += MOVEMENTSPEED;
+		character_mario->SetPosition(Vector2D).x -= MOVEMENTSPEED * deltaTime;
+
+		//Make a copy of character mario then set his position;
+	}
 }
 
 void GameScreenLevel1::Render() 
 {
-	m_background_texture->Render(Vector2D(), SDL_FLIP_NONE);
+	m_background_texture->Render(Vector2D(), camera, SDL_FLIP_NONE);
 
 	for (int i = 0; i < m_enemies.size(); i++) 
 	{
-		m_enemies[i]->Render();
+		m_enemies[i]->Render(camera);
 	}
 
-	character_mario->Render(/*camera, camera*/);
-	character_luigi->Render(/*camera, camera*/);
-	m_pow_block->Render();
+	character_mario->Render(camera);
+	character_luigi->Render(camera);
+	m_pow_block->Render(camera);
 	m_background_texture->Render(Vector2D(0, m_background_yPos), SDL_FLIP_NONE);
 }
 
@@ -128,7 +136,6 @@ void GameScreenLevel1::SetLevelMap()
 										{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 										{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 										{ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1} };
-
 
 	if (m_level_map != nullptr)
 	{

@@ -12,9 +12,9 @@ CharacterLuigi::~CharacterLuigi()
 
 }
 
-void CharacterLuigi::Render()
+void CharacterLuigi::Render(SDL_Rect Camera)
 {
-	Character::Render();
+	Character::Render(Camera);
 }
 
 void CharacterLuigi::Update(float deltaTime, SDL_Event e)
