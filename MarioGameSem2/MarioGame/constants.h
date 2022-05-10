@@ -4,7 +4,7 @@
 
 #define SHAKE_DURATION 0.25f
 
-#define INURED_TIME 2.5f
+#define INURED_TIME 10
 
 #define KOOPA_SPEED 96.0f
 
@@ -22,8 +22,11 @@
 
 #define MOVEMENTSPEED 50.0
 
+#define ANIMATION_DELAY 0.15f
+
 #define GRAVITY 300
 
+#define JUMP_FORCE_KOOPA 250.0f
 #define JUMP_FORCE_DECREMENT 400.0f
 #define INITIAL_JUMP_FORCE 600.0f
 

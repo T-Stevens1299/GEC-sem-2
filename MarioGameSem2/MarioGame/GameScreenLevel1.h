@@ -14,6 +14,7 @@
 #include "CharacterMario.h"
 #include "CharacterLuigi.h"
 #include "CharacterKoopa.h"
+#include "Coin.h"
 
 class Character;
 
@@ -27,7 +28,11 @@ public:
 
 	void Render() override;
 	void Update(float deltaTime, SDL_Event e);
+
 	void UpdatePowBlock();
+	void UpdateEnemies(float deltaTime, SDL_Event e);
+	void UpdateCoins(float deltaTime, SDL_Event e);
+	
 
 private:
 	LevelMap* m_level_map;
@@ -36,10 +41,15 @@ private:
 	CharacterLuigi* character_luigi;
 	CharacterKoopa* Koopa;
 	PowBlock* m_pow_block;
+	Coin* m_Coin;
 
-	SDL_Rect camera;
+	//SDL_Rect camera;
 
 	std::vector<CharacterKoopa*> m_enemies;
+	std::vector<Coin*> m_coins;
+
+	int enemyIndexToDelete;
+	int coinIndexToDelete;
 
 	bool m_screenshake;
 	float m_shake_time;
@@ -51,8 +61,9 @@ private:
 	bool SetUpLevel();
 	void SetLevelMap();
 
-	void UpdateEnemies(float deltaTime, SDL_Event e);
+	
 	void CreateKoopa(Vector2D position, FACING direction, float speed);
+	void CreateCoins(Vector2D position);
 };
 
 #endif

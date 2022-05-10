@@ -8,7 +8,7 @@ CharacterKoopa::CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2
 	m_movement_speed = movement_speed;
 	m_position = start_position;
 	m_injured = false;
-
+	isAlive = true;
 	m_single_sprite_w = m_texture->GetWidth() / 2;
 	m_single_sprite_h = m_texture-> GetHeight();
 }
@@ -18,7 +18,7 @@ CharacterKoopa::~CharacterKoopa()
 
 }
 
-void CharacterKoopa::Render(SDL_Rect Camera)
+void CharacterKoopa::Render(/*SDL_Rect Camera*/)
 {
 	int left = 0.0f;
 
@@ -33,11 +33,11 @@ void CharacterKoopa::Render(SDL_Rect Camera)
 
 	if (m_facing_direction == FACING_RIGHT) 
 	{
-		m_texture->Render(m_position, portion_of_sprite, SDL_FLIP_NONE);
+		m_texture->Render(portion_of_sprite, destRect, SDL_FLIP_NONE);
 	}
 	else 
 	{
-		m_texture->Render(m_position, portion_of_sprite, SDL_FLIP_HORIZONTAL);
+		m_texture->Render(portion_of_sprite, destRect, SDL_FLIP_HORIZONTAL);
 	}
 }
 
@@ -51,11 +51,13 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 		{
 			m_moving_left = true;
 			m_moving_right = false;
+			/*m_position.x -= KOOPA_SPEED;*/
 		}
 		else if (m_facing_direction == FACING_RIGHT)
 		{
 			m_moving_left = false;
 			m_moving_right = true;
+			/*m_position.x += KOOPA_SPEED;*/
 		}
 	}
 	else
@@ -70,13 +72,27 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 			FlipRightWayUp();
 		}			
 	}
+
+	Character::Update(deltaTime, e);
+
+	if (m_position.x < 0) 
+	{
+		m_facing_direction = FACING_LEFT;
+		m_position.x = 0;
+	}
+	else if (m_position.x > SCREEN_WIDTH - m_single_sprite_w) 
+	{
+		m_facing_direction = FACING_RIGHT;
+		m_position.x = SCREEN_WIDTH - m_single_sprite_w;
+	}
+
 }
 
 void CharacterKoopa::TakeDamage()
 {
 	m_injured = true;
 	m_injured_time = INURED_TIME;
-
+	isAlive = false;
 	Jump();
 }
 
@@ -84,15 +100,21 @@ void CharacterKoopa::Jump()
 {
 	if (!m_jumping) 
 	{
-		m_jump_force = INITIAL_JUMP_FORCE;
+		m_jump_force = JUMP_FORCE_KOOPA;
 		m_jumping = true;
 		m_can_jump = false;
 	}
 }
 
+void CharacterKoopa::SetAlive(bool m_is_injured) 
+{
+	m_injured = m_is_injured;
+}
+
 void CharacterKoopa::FlipRightWayUp() 
 {
 	m_facing_direction = FACING_RIGHT;
+	isAlive = true;
 	m_injured = false;
 	Jump();
 }

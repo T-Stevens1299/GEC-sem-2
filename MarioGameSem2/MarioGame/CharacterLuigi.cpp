@@ -12,9 +12,9 @@ CharacterLuigi::~CharacterLuigi()
 
 }
 
-void CharacterLuigi::Render(SDL_Rect Camera)
+void CharacterLuigi::Render(/*SDL_Rect Camera*/)
 {
-	Character::Render(Camera);
+	Character::Render(/*Camera*/);
 }
 
 void CharacterLuigi::Update(float deltaTime, SDL_Event e)
@@ -56,7 +56,15 @@ void CharacterLuigi::Update(float deltaTime, SDL_Event e)
 		break;
 	}
 
-	Character::Update(deltaTime, e);
+	if (luigiDead == false) 
+	{
+		Character::Update(deltaTime, e);
+	}
+	else 
+	{
+		m_position.y += deltaTime * GRAVITY * 3;
+	}
+	
 }
 
 void CharacterLuigi::MoveLeft(float deltaTime)
@@ -74,6 +82,15 @@ void CharacterLuigi::MoveRight(float deltaTime)
 	{
 		m_position.x += deltaTime * MOVEMENTSPEED;
 		m_facing_direction = FACING_RIGHT;
+	}
+}
+
+void CharacterLuigi::LuigiDeath()
+{
+	if (!m_jumping)
+	{
+		m_jumping = true;
+		luigiDead = true;
 	}
 }
 

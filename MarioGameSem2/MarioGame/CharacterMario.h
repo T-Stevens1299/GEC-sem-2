@@ -16,11 +16,15 @@ public:
 	CharacterMario(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~CharacterMario();
 
-	void Render(SDL_Rect Camera);
+	void Render(/*SDL_Rect Camera*/);
 	void Update(float deltaTime, SDL_Event e);
 
 	void MoveLeft(float deltaTime);
 	void MoveRight(float deltaTime);
+
+	void MarioDeath();
+
+	bool marioDead = false;
 
 	//virtual void Jump();
 	//void AddGravity(float deltaTime);

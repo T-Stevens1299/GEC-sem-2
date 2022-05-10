@@ -1,8 +1,7 @@
 ﻿  GameScreenLevel1.cpp
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\PowBlock.h(21,121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\PowBlock.h(21,97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(80,22): error C2228: left of '.position' must have class/struct/union
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(80,22): message : type is 'CharacterMario *'
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(80,22): message : did you intend to use '->' instead?
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(82,28): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\s012473l\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(91,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\PowBlock.h(21,121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\PowBlock.h(21,97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(101,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(106,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\MarioGame\GameScreenLevel1.cpp(141): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
+  MarioGame.vcxproj -> C:\Users\FiercePC\Documents\GitHub\GEC-sem-2\MarioGameSem2\Debug\MarioGame.exe

@@ -14,7 +14,7 @@ public:
 	~PowBlock();
 
 	void TakeHit();
-	void Render(SDL_Rect Camera);
+	void Render(/*SDL_Rect Camera*/);
 
 	inline bool isAvailable() { return m_num_hits_left > 0; }
 

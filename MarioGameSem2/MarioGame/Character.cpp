@@ -35,28 +35,28 @@ Character::~Character()
 	m_renderer = nullptr;
 }
 
-void Character::Render(SDL_Rect camera_rect)
+void Character::Render(/*SDL_Rect camera_rect*/)
 {
-	SDL_Rect src_rect;
-	SDL_Rect dest_rect;
+	//SDL_Rect src_rect;
+	//SDL_Rect dest_rect;
 
-	src_rect.x = 0;
-	src_rect.y = 0;
-	src_rect.w = m_texture->GetWidth();
-	src_rect.h = m_texture->GetHeight();
+	//src_rect.x = 0;
+	//src_rect.y = 0;
+	//src_rect.w = m_texture->GetWidth();
+	//src_rect.h = m_texture->GetHeight();
 
-	dest_rect.x = m_position.x - camera_rect.x;
-	dest_rect.y = m_position.y - camera_rect.y;
-	dest_rect.w = m_texture->GetWidth();
-	dest_rect.h = m_texture->GetHeight();
+	//dest_rect.x = m_position.x - camera_rect.x;
+	//dest_rect.y = m_position.y - camera_rect.y;
+	//dest_rect.w = m_texture->GetWidth();
+	//dest_rect.h = m_texture->GetHeight();
 
 	if (m_facing_direction == FACING_RIGHT) 
 	{
-		m_texture->Render(m_position, src_rect, SDL_FLIP_NONE);  //help3
+		m_texture->Render(m_position, SDL_FLIP_NONE);  //help3
 	}
 	else 
 	{
-		m_texture->Render(m_position, dest_rect, SDL_FLIP_HORIZONTAL);
+		m_texture->Render(m_position, SDL_FLIP_HORIZONTAL);
 	}
 }
 

@@ -12,9 +12,9 @@ CharacterMario::~CharacterMario()
 
 }
 
-void CharacterMario::Render(SDL_Rect Camera)
+void CharacterMario::Render(/*SDL_Rect Camera*/)
 {
-	Character::Render(Camera);
+	Character::Render(/*Camera*/);
 }
 
 void CharacterMario::Update(float deltaTime, SDL_Event e) 
@@ -57,7 +57,14 @@ void CharacterMario::Update(float deltaTime, SDL_Event e)
 		break;
 	}
 
-	Character::Update(deltaTime, e);
+	if (marioDead == false)
+	{
+		Character::Update(deltaTime, e);
+	}
+	else
+	{
+		m_position.y += deltaTime * GRAVITY * 3;
+	}
 }
 
 void CharacterMario::MoveLeft(float deltaTime)
@@ -75,6 +82,15 @@ void CharacterMario::MoveRight(float deltaTime)
 	{
 		m_position.x += deltaTime * MOVEMENTSPEED;
 		m_facing_direction = FACING_RIGHT;
+	}
+}
+
+void CharacterMario::MarioDeath() 
+{
+	if (!m_jumping) 
+	{
+		m_jumping = true;
+		marioDead = true;
 	}
 }
 

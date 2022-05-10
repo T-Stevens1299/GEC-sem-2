@@ -17,13 +17,14 @@ public:
 	CharacterKoopa(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map, FACING start_facing, float movement_speed);
 	~CharacterKoopa();
 
-	void Render(SDL_Rect Camera);
+	void Render(/*SDL_Rect Camera*/);
 	void Update(float deltaTime, SDL_Event e);
 
 	void Jump() override;
 	void TakeDamage();
-
-	bool GetInjured() { return m_injured; };
+	void SetAlive(bool mIsAlive);
+	bool GetAlive() { return isAlive; };
+	/*bool GetInjured() { return m_injured; };*/
 
 	float m_single_sprite_w;
 	float m_single_sprite_h;
@@ -35,6 +36,7 @@ private:
 
 	FACING m_facing_direction;
 
+	bool isAlive;
 	bool m_injured;
 	float m_injured_time;
 };
