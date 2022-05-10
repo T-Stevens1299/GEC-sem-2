@@ -43,15 +43,16 @@ private:
 	PowBlock* m_pow_block;
 	Coin* m_Coin;
 
-	//SDL_Rect camera;
-
 	std::vector<CharacterKoopa*> m_enemies;
 	std::vector<Coin*> m_coins;
 
 	int enemyIndexToDelete;
 	int coinIndexToDelete;
 
+	bool MarioDead = false;
+	bool LuigiDead = false;
 	bool m_screenshake;
+
 	float m_shake_time;
 	float m_wobble;
 	float m_background_yPos;

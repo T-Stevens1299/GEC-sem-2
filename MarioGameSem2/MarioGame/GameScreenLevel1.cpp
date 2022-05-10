@@ -10,6 +10,10 @@ GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer
 {
 	enemyIndexToDelete = -1;
 	coinIndexToDelete = -1;
+
+	MarioDead = false;
+	LuigiDead = false;
+
 	SetUpLevel();
 	m_level_map = nullptr;
 }
@@ -38,17 +42,6 @@ GameScreenLevel1::~GameScreenLevel1()
 
 void GameScreenLevel1::Update(float deltaTime, SDL_Event e) 
 {
-	//camera.x = (SCREEN_WIDTH / 2);
-
-	//if (camera.x < 0)
-	//{
-	//	camera.x = 0;
-	//}
-
-	//if (camera.x > LEVEL_WIDTH - camera.w) 
-	//{
-	//	camera.x = (LEVEL_WIDTH - camera.w);
-	//}
 
 	if (m_screenshake) 
 	{
@@ -82,25 +75,22 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 		cout << "Circle hit!" << endl;
 	}
 
-	//if (character_mario->GetPosition().x > SCREEN_WIDTH * 0.6)
-	//{
-	//	camera.x += MOVEMENTSPEED;
+	//Ends the game if Mario and Luigi are dead
+	if ((MarioDead == true) & (LuigiDead == true)) 
+	{
+		cout << "Game Over" << endl;
+		exit(1);
+	}
 
-	//	CharacterMario* clone_mario = character_mario;
-	//	Vector2D position = clone_mario->GetPosition();
-	//	clone_mario->SetPosition(position).x -= MOVEMENTSPEED * deltaTime;
-
-	//	//Make a copy of character mario then set his position;
-	//}
 }
 
 void GameScreenLevel1::Render() 
 {
-	m_background_texture->Render(Vector2D(), /*camera*/ SDL_FLIP_NONE);
+	m_background_texture->Render(Vector2D(), SDL_FLIP_NONE);
 
 	for (int i = 0; i < m_enemies.size(); i++) 
 	{
-		m_enemies[i]->Render(/*camera*/);
+		m_enemies[i]->Render();
 	}
 
 	for (int i = 0; i < m_coins.size(); i++)
@@ -108,9 +98,9 @@ void GameScreenLevel1::Render()
 		m_coins[i]->Render();
 	}
 
-	character_mario->Render(/*camera*/);
-	character_luigi->Render(/*camera*/);
-	m_pow_block->Render(/*camera*/);
+	character_mario->Render();
+	character_luigi->Render();
+	m_pow_block->Render();
 	m_background_texture->Render(Vector2D(0, m_background_yPos), SDL_FLIP_NONE);
 }
 
@@ -127,6 +117,8 @@ bool GameScreenLevel1::SetUpLevel()
 
 	m_pow_block = new PowBlock(m_renderer, m_level_map);
 
+
+	//Enitity Spawning
 	CreateKoopa(Vector2D(150, 32), FACING_LEFT, KOOPA_SPEED);
 	CreateKoopa(Vector2D(325, 32), FACING_LEFT, KOOPA_SPEED);
 	CreateCoins(Vector2D(160, 128));
@@ -239,6 +231,7 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 				{
 					if (m_enemies[i]->GetAlive() == true)
 					{
+						MarioDead = true;
 						character_mario->MarioDeath();
 					}
 					else
@@ -252,6 +245,7 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 				{
 					if (m_enemies[i]->GetAlive() == true)
 					{
+						LuigiDead = true;
 						character_luigi->LuigiDeath();
 					}
 					else
@@ -263,6 +257,11 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 			}
 
 		}
+	}
+	else
+	{
+		cout << "You Win!" << endl;
+		exit(2);
 	}
 
 }

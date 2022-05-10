@@ -18,7 +18,7 @@ CharacterKoopa::~CharacterKoopa()
 
 }
 
-void CharacterKoopa::Render(/*SDL_Rect Camera*/)
+void CharacterKoopa::Render()
 {
 	int left = 0.0f;
 
@@ -51,13 +51,13 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 		{
 			m_moving_left = true;
 			m_moving_right = false;
-			/*m_position.x -= KOOPA_SPEED;*/
+			
 		}
 		else if (m_facing_direction == FACING_RIGHT)
 		{
 			m_moving_left = false;
 			m_moving_right = true;
-			/*m_position.x += KOOPA_SPEED;*/
+			
 		}
 	}
 	else
@@ -75,14 +75,19 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 
 	Character::Update(deltaTime, e);
 
+	//Moves the Koopa in the opposite direction if it hits the screen edge
 	if (m_position.x < 0) 
 	{
-		m_facing_direction = FACING_LEFT;
+		m_moving_left = true;
+		m_moving_right = false;
+		m_facing_direction = FACING_RIGHT;
 		m_position.x = 0;
 	}
 	else if (m_position.x > SCREEN_WIDTH - m_single_sprite_w) 
 	{
-		m_facing_direction = FACING_RIGHT;
+		m_moving_left = false;
+		m_moving_right = true;
+		m_facing_direction = FACING_LEFT;
 		m_position.x = SCREEN_WIDTH - m_single_sprite_w;
 	}
 

@@ -28,7 +28,7 @@ PowBlock::~PowBlock()
 	m_level_map = nullptr;
 }
 
-void PowBlock::Render(/*SDL_Rect Camera*/)
+void PowBlock::Render()
 {
 	if (m_num_hits_left > 0)
 	{

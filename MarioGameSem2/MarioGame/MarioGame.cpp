@@ -56,6 +56,7 @@ int main(int argc, char* args[])
 {
 	if (InitSDL())
 	{
+		//Plays the music
 		g_music = Mix_LoadMUS("Music/Mario.mp3");
 		if (Mix_PlayingMusic() == 0) 
 		{
@@ -163,6 +164,7 @@ void CloseSDL()
 
 void LoadMusic(string path) 
 {
+	//Loads music from file
 	g_music = Mix_LoadMUS(path.c_str());
 	if (g_music == nullptr) 
 	{

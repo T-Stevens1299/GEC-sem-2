@@ -12,9 +12,9 @@ CharacterMario::~CharacterMario()
 
 }
 
-void CharacterMario::Render(/*SDL_Rect Camera*/)
+void CharacterMario::Render()
 {
-	Character::Render(/*Camera*/);
+	Character::Render();
 }
 
 void CharacterMario::Update(float deltaTime, SDL_Event e) 
@@ -93,35 +93,3 @@ void CharacterMario::MarioDeath()
 		marioDead = true;
 	}
 }
-
-//void CharacterMario::SetPosition(Vector2D new_position)
-//{
-//	m_position = new_position;
-//}
-//
-//Vector2D CharacterMario::GetPosition()
-//{
-//	return m_position;
-//}
-//
-//void CharacterMario::AddGravity(float deltaTime)
-//{
-//	if (m_position.y + 64 <= SCREEN_HEIGHT)
-//	{
-//		m_position.y += GRAVITY * deltaTime;
-//	}
-//	else
-//	{
-//		m_can_jump = true;
-//	}
-//}
-//
-//void CharacterMario::Jump()
-//{
-//	if (!m_jumping)
-//	{
-//		m_jump_force = INITIAL_JUMP_FORCE;
-//		m_jumping = true;
-//		m_can_jump = false;
-//	}
-//}
