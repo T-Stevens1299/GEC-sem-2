@@ -44,8 +44,6 @@ private:
 	PowBlock* m_pow_block;
 	Coin* m_Coin;
 
-	SoundManager* m_sound_system;
-
 	std::vector<CharacterKoopa*> m_enemies;
 	std::vector<Coin*> m_coins;
 
