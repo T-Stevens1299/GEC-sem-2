@@ -13,9 +13,11 @@ public:
 
 	virtual void Render();
 	virtual void Update(float deltaTime, SDL_Event e);
+	SCREENS GetScreenToChange() { return m_screen_to_change; }
 
 protected:
 	SDL_Renderer* m_renderer;
+	SCREENS m_screen_to_change;
 };
 
 #endif

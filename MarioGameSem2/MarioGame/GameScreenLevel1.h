@@ -7,6 +7,7 @@
 #include "GameScreen.h"
 #include "Commons.h"
 #include "Collisions.h"
+#include "SoundManager.h"
 
 #include "LevelMap.h"
 #include "PowBlock.h"
@@ -42,6 +43,8 @@ private:
 	CharacterKoopa* Koopa;
 	PowBlock* m_pow_block;
 	Coin* m_Coin;
+
+	SoundManager* m_sound_system;
 
 	std::vector<CharacterKoopa*> m_enemies;
 	std::vector<Coin*> m_coins;

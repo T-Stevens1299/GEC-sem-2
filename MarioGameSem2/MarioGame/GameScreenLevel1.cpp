@@ -79,7 +79,7 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 	if ((MarioDead == true) & (LuigiDead == true)) 
 	{
 		cout << "Game Over" << endl;
-		exit(1);
+		m_screen_to_change = SCREEN_GAMEOVER;
 	}
 
 }
@@ -261,7 +261,7 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 	else
 	{
 		cout << "You Win!" << endl;
-		exit(2);
+		m_screen_to_change = SCREEN_WIN;
 	}
 
 }

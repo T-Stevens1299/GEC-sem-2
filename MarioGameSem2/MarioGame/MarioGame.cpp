@@ -56,14 +56,14 @@ int main(int argc, char* args[])
 {
 	if (InitSDL())
 	{
-		//Plays the music
+
 		g_music = Mix_LoadMUS("Music/Mario.mp3");
 		if (Mix_PlayingMusic() == 0) 
 		{
 			Mix_PlayMusic(g_music, -1);
 		}
 
-		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL1);
+		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_MENU);
 		g_old_time = SDL_GetTicks();
 
 		bool quit = false;

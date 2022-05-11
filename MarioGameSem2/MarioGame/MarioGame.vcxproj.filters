@@ -54,6 +54,15 @@
     <ClCompile Include="Coin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GameScreenIntro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScreenLose.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScreenWin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="SDL2\SDL\SDL2.lib" />
@@ -102,6 +111,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Coin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScreenIntro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScreenLose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScreenWin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
